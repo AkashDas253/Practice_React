@@ -2,23 +2,27 @@ import React, { useState } from 'react';
 
 const PLACEHOLDER_IMG = process.env.PUBLIC_URL + '/placeholder/no_image.svg';
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, onClick }) {
   const [imgSrc, setImgSrc] = useState(movie.Poster !== 'N/A' ? movie.Poster : PLACEHOLDER_IMG);
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <div style={{
-      border: '1px solid #ddd',
-      borderRadius: '8px',
-      padding: '1rem',
-      margin: '0.5rem',
-      width: '220px',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      background: '#fff'
-    }}>
+    <div
+      style={{
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        padding: '1rem',
+        margin: '0.5rem',
+        width: '220px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        background: '#fff',
+        cursor: 'pointer' // Make it clear it's clickable
+      }}
+      onClick={onClick} // This is required for modal to open!
+    >
       {!imgLoaded && (
         <div style={{
           width: '100px',
