@@ -1,0 +1,45 @@
+
+.weather-card {
+  background: #f7fbff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(102,166,255,0.08);
+  margin: 24px auto;
+  max-width: 400px;
+  width: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.weather-card:hover {
+  box-shadow: 0 4px 16px rgba(102,166,255,0.18);
+}
+
+.coords {
+  font-size: 1em;
+  color: #888;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.current-weather p {
+  margin: 8px 0;
+  font-size: 1.1em;
+}
+
+@media (max-width: 600px) {
+  .weather-card {
+    padding: 14px;
+    max-width: 98vw;
+    font-size: 0.98em;
+  }
+  .coords {
+    font-size: 0.95em;
+    gap: 8px;
+  }
+  .current-weather p {
+    font-size: 1em;
+  }
+}
