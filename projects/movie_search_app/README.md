@@ -27,3 +27,4 @@ Clone the repository and open the project folder. No special setup is required i
 ## Contributing
 
 Contributions and suggestions are welcome! Please open an issue or submit a pull request for improvements.
+
