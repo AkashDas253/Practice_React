@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
@@ -72,8 +73,21 @@ function App() {
           </li>
         ))}
       </ul>
+=======
+import './App.css';
+import Calculator from './Calculator';
+
+function App() {
+  return (
+    <div className="App">
+      <Calculator />
+>>>>>>> calculator
     </div>
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> calculator
