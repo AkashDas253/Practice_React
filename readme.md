@@ -1,5 +1,8 @@
 ## Practice React
 
+### Basics
+- [Initialization](./basics/initialization/README.md)
+
 ### Mini projects
 
 - [Movie Search App](./projects/movie_search_app/README.md)
