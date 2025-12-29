@@ -1,7 +1,7 @@
 ## Practice React
 
 ### Basics
-- [Initialization](./basics/initialization/README.md)
+- [Hello World](./basics/hello_world/README.md)
 
 ### Mini projects
 
