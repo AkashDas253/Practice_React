@@ -1,61 +1,26 @@
 .App {
-  text-align: center;
-  max-width: 400px;
-  margin: 40px auto;
-  background: #f9f9f9;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-input {
-  padding: 0.5em;
-  margin-right: 0.5em;
-  width: 60%;
-}
-
-button {
-  padding: 0.5em 1em;
-  margin-left: 0.5em;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 0.5em 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #f0f2f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-li span {
-  cursor: pointer;
-}
-
-.list-item {
+.calculator-layout {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5em;
-  margin: 0.5em 0;
-  border-radius: 4px;
+  flex-direction: row;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.status-not-started {
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-.status-in-progress {
-  background-color: #fff3cd;
-  color: #856404;
-}
-
-.status-done {
-  background-color: #d4edda;
-  color: #155724;
-  text-decoration: line-through;
+@media (max-width: 600px) {
+  .calculator-layout {
+    flex-direction: column;
+    align-items: center;
+  }
 }

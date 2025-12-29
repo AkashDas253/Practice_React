@@ -19,9 +19,9 @@ function MovieCard({ movie, onClick }) {
         flexDirection: 'column',
         alignItems: 'center',
         background: '#fff',
-        cursor: 'pointer' // Make it clear it's clickable
+        cursor: 'pointer' 
       }}
-      onClick={onClick} // This is required for modal to open!
+      onClick={onClick} 
     >
       {!imgLoaded && (
         <div style={{

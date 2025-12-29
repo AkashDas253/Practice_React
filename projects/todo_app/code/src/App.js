@@ -14,7 +14,6 @@ function App() {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
-  // Sync todos across tabs/windows
   useEffect(() => {
     const handleStorage = (event) => {
       if (event.key === 'todos') {
