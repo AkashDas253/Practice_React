@@ -1,26 +1,113 @@
 
-# React Project Initialization Practice
+# React Practice Project (CRA)
 
-This is a simple practice project for initializing a React application. The goal is to get familiar with the basic setup and structure of a React project.
+A clean reference for initializing and stripping down a standard `create-react-app` project.
 
-## Steps Practiced
+---
 
-- Creating a new React app using Create React App
-- Understanding the project folder structure
-- Running the development server
-- Editing basic files (App.js, index.js, etc.)
+## 1. Initialization
 
-## How to Run
+To start a new project from scratch:
 
-1. Open a terminal in this directory.
-2. Run `npm install` to install dependencies.
-3. Run `npm start` to launch the development server.
-4. Visit [http://localhost:3000](http://localhost:3000) in your browser.
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
 
-## Purpose
+```
 
-This project is for learning and practicing the initialization and basic usage of React. No advanced features or customizations are included.
+---
 
-## License
+## 2. Restart & Recovery
 
-This project is for educational purposes only.
+If you receive the error **"'react-scripts' is not recognized"**, it means your local dependencies are missing or corrupted. Use these steps to reset the environment:
+
+### Quick Fix
+
+Install the missing `node_modules` based on your `package.json`:
+
+```bash
+npm install
+
+```
+
+### Full Environment Reset
+
+If the quick fix fails, perform a clean reinstall:
+
+```bash
+rd /s /q node_modules
+del package-lock.json
+npm install
+npm start
+
+```
+
+---
+
+## 3. The Cleanup Reference
+
+CRA comes with several files that clutter the `src` folder. Follow these steps to reach a "Base State."
+
+### Step A: File Deletion
+
+Delete the following files from the `src/` directory:
+
+* `App.css`
+* `App.test.js`
+* `index.css`
+* `logo.svg`
+* `reportWebVitals.js`
+* `setupTests.js`
+
+### Step B: Reset `src/index.js`
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+```
+
+### Step C: Reset `src/App.js`
+
+```javascript
+function App() {
+  return (
+    <div>
+      <h1>Project Starter</h1>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+---
+
+## 4. Scripts Reference
+
+| Command | Action |
+| --- | --- |
+| `npm start` | Runs the app in development mode at `http://localhost:3000` |
+| `npm run build` | Bundles the app into the `build` folder for production |
+| `npm test` | Launches the interactive test runner |
+| `npm run eject` | **One-way operation.** Removes the single-build dependency and copies config files |
+
+---
+
+## 5. Key Dependencies
+
+* **React 19**: The latest version of the React library.
+* **React Scripts**: Manages the build configurations (Webpack, Babel, etc.).
+* **Testing Library**: Included by default for unit and integration testing.
+
+---
