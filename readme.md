@@ -1,11 +1,11 @@
 ## Practice React
 
 ### Basics
-- [Hello World](./basics/hello_world/README.md)
-
+- [Hello World](./basics/hello_world/)
+- [Initialization](./basics/initialization/)
 ### Mini projects
 
-- [Movie Search App](./projects/movie_search_app/README.md)
-- [ToDo App](./projects/todo_app/README.md)
-- [Weather App](./projects/weather_app/README.md)
-- [Calculator App](./projects/calculator_app/README.md)
+- [Movie Search App](./projects/movie_search_app/)
+- [ToDo App](./projects/todo_app/)
+- [Weather App](./projects/weather_app/)
+- [Calculator App](./projects/calculator_app/)
